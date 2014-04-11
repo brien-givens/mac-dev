@@ -12,7 +12,8 @@ rm "$TOOLS"
 git clone git://github.com/ansible/ansible.git
 cd ./ansible
 source ./hacking/env-setup
-sudo pip install paramiko PyYAML jinja2 httplib2
+sudo easy_install pip
+sudo ARCHFLAGS="-arch x86_64" CFLAGS=-Wunused-command-line-argument-hard-error-in-future pip install paramiko PyYAML jinja2 httplib2
 exit
 
 
