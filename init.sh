@@ -5,7 +5,7 @@ if [ ! -f "$TOOLS" ]; then
 fi
 TMPMOUNT=`/usr/bin/mktemp -d /tmp/clitools.XXXX`
 hdiutil attach "$TOOLS" -mountpoint "$TMPMOUNT"
-installer -pkg "$TMPMOUNT/Command Line Tools (OS X 10.9).pkg" -target /
+sudo installer -pkg "$TMPMOUNT/Command Line Tools (OS X 10.9).pkg" -target /
 hdiutil detach "$TMPMOUNT"
 rm -rf "$TMPMOUNT"
 rm "$TOOLS"
